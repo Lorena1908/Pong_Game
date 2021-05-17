@@ -1,5 +1,5 @@
 import turtle # This is a module that makes it possible to build a window
-import winsound # This is used to import sound into the program
+from playsound import playsound # This is used to import sound into the program
 
 win = turtle.Screen() # This creates the screen
 win.title("Pong by @TokyoEdTech") # This is the title of the window
@@ -98,12 +98,12 @@ while True: # It means that it'll loop forever
     if ball.ycor() > 290: # It checks if the ball is on the top bezel
         ball.sety(290)
         ball.yspeed *= -1 # It reverses the movement of the ball, in this case it goes down
-        winsound.PlaySound("bounce.wav", winsound.SND_ASYNC) # When this happens the sound is played
+        playsound("bounce.wav") # When this happens the sound is played
     
     if ball.ycor() < -290: # It checks if the ball is on the bottom bezel
         ball.sety(-290)
         ball.yspeed *= -1 # It reverses the movement of the ball, in this case it goes up
-        winsound.PlaySound("bounce.wav", winsound.SND_ASYNC) # When this happens the sound is played
+        playsound("bounce.wav") # When this happens the sound is played
     
     # Left and right
     if ball.xcor() > 390: # It checks if the ball is on the top bezel
@@ -127,10 +127,10 @@ while True: # It means that it'll loop forever
         # The line above checks if the X coordinate of the ball is between the right & left and the top & bottom borders of the paddle b
         ball.setx(340)
         ball.xspeed *= -1 # It reverses the movement of the ball
-        winsound.PlaySound("bounce.wav", winsound.SND_ASYNC) # When this happens the sound is played
+        playsound("bounce.wav") # When this happens the sound is played
     
     if (-340 > ball.xcor() > -350) and (paddle_a.ycor() - 40 < ball.ycor() < paddle_a.ycor() + 40): 
         # The line above checks if the X coordinate of the ball is between the right & left and the top & bottom borders of the paddle a
         ball.setx(-340)
         ball.xspeed *= -1 # It reverses the movement of the ball
-        winsound.PlaySound("bounce.wav", winsound.SND_ASYNC) # When this happens the sound is played
+        playsound("bounce.wav") # When this happens the sound is played
