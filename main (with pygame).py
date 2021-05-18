@@ -104,6 +104,7 @@ def main():
             if event.type == pygame.QUIT:
                 pygame.quit()
             
+            pygame.key.set_repeat(100)
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_w:
                     paddle_a.y -= paddle_a.yspeed
