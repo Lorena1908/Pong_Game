@@ -4,4 +4,5 @@ This game has two versions:
 - The `main (with pygame).py`was made with the pygame module
 
 ## Setup
-To run any of the programs just type `python <filename>` on the command line
+1. Install the required packages using the following command: `pip install -r requirements.txt`
+2. To run any of the programs just type `python <filename>` on the command line
